@@ -14,27 +14,15 @@
 
 <div data-lightning-out="true"></div>
 
-<form onsubmit="return processForm()">
-        <label for="name">Enter sessioId:</label>
-        <input type="text" id="name" required>
-        <button type="submit">Submit</button>
-</form>
-
   <script>
 
-    function processForm() {
-            const sessionId = document.getElementById("name").value;
-            alert("SessionId:, " + sessionId + "!");
-            runLightningOut(sessionId);
-    }
-
-    function runLightningOut(sessionId) {
       const appName = 'c:optOutFormWithAuthApp';
       const componentName = 'c:optOutForm';
       const lightningEndpoint = 'https://alex-vishneuski-dev-ed.my.salesforce.com';
       const targetElement = document.querySelector("[data-lightning-out]");
       const componentAttributes = {
       };
+      const sessionId = '00D6F000002RIUu!AQ8AQIaUOw9TbCQb6HU7_OXuT.AShmpLW.VhYT4W05Pz.4oWOXCMdtR7sM9G1Al4FtekVxX2URlBXfrhyiHH6qr67WbYHJWw';
       alert("SessionId in runLightningOut:, " + sessionId + "!");
 
       $Lightning.use(
@@ -52,7 +40,6 @@
               lightningEndpoint,
               sessionId
       );
-    }
 
   </script>
 
