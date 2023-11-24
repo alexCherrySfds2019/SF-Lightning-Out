@@ -21,9 +21,9 @@
   <script>
 
     function processForm() {
-            let sessionId = document.getElementById("name").value;
+            const sessionId = document.getElementById("name").value;
             alert("SessionId:, " + sessionId + "!");
-            return false;
+            runLightningOut(sessionId);
     }
 
     function runLightningOut(sessionId) {
