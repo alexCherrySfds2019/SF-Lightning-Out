@@ -1,0 +1,57 @@
+<html>
+
+<style>
+
+  a {
+    color: orange;
+  }
+
+</style>
+
+<script src="https://alex-vishneuski-dev-ed.my.salesforce.com/lightning/lightning.out.js"></script>
+
+<div data-lightning-out="true"></div>
+
+<form onsubmit="return processForm()">
+        <label for="name">Enter sessioId:</label>
+        <input type="text" id="name" required>
+        <button type="submit">Submit</button>
+</form>
+
+  <script>
+
+    function processForm() {
+            let sessionId = document.getElementById("name").value;
+            alert("SessionId:, " + sessionId + "!");
+            return false;
+    }
+
+    function runLightningOut(sessionId) {
+      const appName = 'c:optOutFormApp';
+      const componentName = 'c:optOutForm';
+      const lightningEndpoint = 'https://alex-vishneuski-dev-ed.my.site.com';
+      const targetElement = document.querySelector("[data-lightning-out]");
+      const componentAttributes = {
+      };
+
+      $Lightning.use(
+              appName,
+              function (){
+                $Lightning.createComponent(
+                        componentName,
+                        componentAttributes,
+                        targetElement,
+                        function (cmp){
+                          console.log('lightning component created');
+                        }
+                );
+              },
+              lightningEndpoint,
+              sessionId
+      );
+    }
+
+  </script>
+
+
+</html>
