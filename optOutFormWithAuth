@@ -27,9 +27,9 @@
     }
 
     function runLightningOut(sessionId) {
-      const appName = 'c:optOutFormApp';
+      const appName = 'c:optOutFormAppWithAuth';
       const componentName = 'c:optOutForm';
-      const lightningEndpoint = 'https://alex-vishneuski-dev-ed.my.site.com';
+      const lightningEndpoint = 'https://alex-vishneuski-dev-ed.my.salesforce.com';
       const targetElement = document.querySelector("[data-lightning-out]");
       const componentAttributes = {
       };
