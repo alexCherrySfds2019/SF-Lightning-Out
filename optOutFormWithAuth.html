@@ -10,7 +10,8 @@
 
 </style>
 
-<script src="https://alex-vishneuski-dev-ed.my.salesforce.com/lightning/lightning.out.js"></script>
+<!--<script src="https://alex-vishneuski-dev-ed.my.salesforce.com/lightning/lightning.out.js"></script>-->
+<script src="https://alex-vishneuski-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
 
 <div data-lightning-out="true"></div>
 
@@ -18,11 +19,12 @@
 
       const appName = 'c:optOutFormWithAuthApp';
       const componentName = 'c:optOutForm';
-      const lightningEndpoint = 'https://alex-vishneuski-dev-ed.my.salesforce.com';
+      //const lightningEndpoint = 'https://alex-vishneuski-dev-ed.my.salesforce.com';
+      const lightningEndpoint = 'https://alex-vishneuski-dev-ed.lightning.force.com';
       const targetElement = document.querySelector("[data-lightning-out]");
       const componentAttributes = {
       };
-      const sessionId = '00D6F000002RIUu!AQ8AQIaUOw9TbCQb6HU7_OXuT.AShmpLW.VhYT4W05Pz.4oWOXCMdtR7sM9G1Al4FtekVxX2URlBXfrhyiHH6qr67WbYHJWw';
+      const sessionId = '00D6F000002RIUu!AQ8AQBG3F8A90Wp4hHGYbmxgekzf1EjpZODdAijGU06Wtmqrrr5Lc4z_ddtXbXyJ0zKlljytDEmVVyw81iOnptvBcO1PdFbQ';
       alert("SessionId in runLightningOut:, " + sessionId + "!");
 
       $Lightning.use(
