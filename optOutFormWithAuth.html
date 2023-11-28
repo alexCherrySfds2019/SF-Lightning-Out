@@ -1,7 +1,7 @@
 <html>
-<!--<head>
+<head>
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-</head>-->
+</head>
 <style>
 
   a {
@@ -13,50 +13,10 @@
 <!--<script src="https://alex-vishneuski-dev-ed.my.salesforce.com/lightning/lightning.out.js"></script>-->
 <script src="https://alex-vishneuski-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
 
-<form onsubmit="return processForm()">
-        <label for="name">Enter sessioId:</label>
-        <input type="text" id="name" required>
-        <button type="submit">Submit</button>
-</form>
-  
 <div data-lightning-out="true"></div>
 
-<script>
+  <script>
 
-    function processForm() {
-        const sessionId = document.getElementById("name").value;
-        console.log("SessionId in processForm:, " + sessionId + "!");
-        runLightningOut(sessionId);
-    }
-    
-    function runLightningOut(sessionId) {
-          const appName = 'c:optOutFormWithAuthApp';
-          const componentName = 'c:optOutForm';
-          //const lightningEndpoint = 'https://alex-vishneuski-dev-ed.my.salesforce.com';
-          const lightningEndpoint = 'https://alex-vishneuski-dev-ed.lightning.force.com';
-          const targetElement = document.querySelector("[data-lightning-out]");
-          const componentAttributes = {
-          };
-          console.log("SessionId in runLightningOut:, " + sessionId + "!");
-
-          $Lightning.use(
-              appName,
-              function (){
-                  $Lightning.createComponent(
-                      componentName,
-                      componentAttributes,
-                      targetElement,
-                      function (cmp){
-                          console.log('lightning component created');
-                      }
-                  );
-              },
-              lightningEndpoint,
-              sessionId
-          );
-      }
-  
-/*
       const appName = 'c:optOutFormWithAuthApp';
       const componentName = 'c:optOutForm';
       //const lightningEndpoint = 'https://alex-vishneuski-dev-ed.my.salesforce.com';
@@ -65,7 +25,7 @@
       const componentAttributes = {
       };
       const sessionId = '00D6F000002RIUu!AQ8AQBG3F8A90Wp4hHGYbmxgekzf1EjpZODdAijGU06Wtmqrrr5Lc4z_ddtXbXyJ0zKlljytDEmVVyw81iOnptvBcO1PdFbQ';
-      console.log("SessionId in runLightningOut:, " + sessionId + "!");
+      alert("SessionId in runLightningOut:, " + sessionId + "!");
 
       $Lightning.use(
               appName,
@@ -82,7 +42,7 @@
               lightningEndpoint,
               sessionId
       );
-*/
+
   </script>
 
 
